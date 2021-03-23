@@ -7,7 +7,7 @@ namespace Math_Test
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Bert's Math Test, please type Y to continue.");
+            Console.WriteLine("Welcome to Bert's Math Test, press the 'Enter' key to continue.");
             Console.ReadLine();
             Console.WriteLine("Fantastic, let's start with some basic addition.");
             Thread.Sleep(1000);
@@ -25,6 +25,12 @@ namespace Math_Test
                 string userinput = Console.ReadLine();
                 int answer = x + y;
 
+                if (userinput == "")
+                {
+                    Console.WriteLine("You must enter a valid number");
+                    continue;
+                }
+                
                 if (answer == int.Parse(userinput))
                 {
                     Console.WriteLine("Congratulations, that's correct!");
