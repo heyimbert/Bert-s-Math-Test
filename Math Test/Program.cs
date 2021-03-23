@@ -43,7 +43,7 @@ namespace Math_Test
                 }
                 else
                 {
-                    Console.WriteLine("You suck!");
+                    Console.WriteLine("Sorry, you failed the math test :(");
                     break;
                 }
             }
