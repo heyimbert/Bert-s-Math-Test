@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace Math_Test
 {
@@ -27,10 +28,16 @@ namespace Math_Test
 
                 if (userinput == "")
                 {
-                    Console.WriteLine("You must enter a valid number");
+                    Console.WriteLine("You must enter a valid number.");
                     continue;
                 }
-                
+
+                if (Regex.IsMatch(userinput, @"^[a-zA-Z\s]*$"))
+                {
+                    Console.WriteLine("You must enter a valid number.");
+                    continue;
+                }
+
                 if (answer == int.Parse(userinput))
                 {
                     Console.WriteLine("Congratulations, that's correct!");
