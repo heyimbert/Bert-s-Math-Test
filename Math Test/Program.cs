@@ -51,6 +51,11 @@ namespace Math_Test
                 else
                 {
                     Console.WriteLine("Sorry, you failed the math test :(");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("Freaking idiot...");
+                    Thread.Sleep(1000);
+                    Console.WriteLine("Please press the 'Enter' key to exit.");
+                    Console.ReadLine();
                     break;
                 }
             }
